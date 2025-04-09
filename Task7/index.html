@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7</title>
+</head>
+
+<body>
+    <ul id="myList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+    <button id="addButton">Add New Item</button>
+
+    <script>
+        // JavaScript code here
+        function addListItem() {
+            let itemName = prompt("INtroduceți numele elementului:");
+            if (itemName === null || itemName.trim() === "") {
+                alert("Numele nu poate fi gol!");
+                return;
+            }
+            const ul = document.getElementById('myList');
+            const li = document.createElement('li');
+            li.textContent = itemName;
+            ul.appendChild(li);
+        }
+        document.getElementById('addButton').addEventListener('click', addListItem);
+    </script>
+
+
+</body>
+
+</html>
